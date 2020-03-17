@@ -7,11 +7,23 @@ namespace kata_gof_builder_shop_order_completion_tests
     public class ProgramTests
     {
         [Fact]
-        public void Main_PerformsAllBuildSteps()
+        public void BuyNewClothes_PerformsAllBuildSteps()
         {
-            Program.Main(null);
-            var fulfilledOrder = Program.FulfilledOrder;
-            Assert.True(fulfilledOrder.IsPaymentReserved);
+            var fulfilledOrder = Program.BuyNewClothes();
+
+            Assert.NotEqual(Guid.Empty, fulfilledOrder.PaymentReferenceId);
+            Assert.True(fulfilledOrder.ProductionFinishedTimeEstimate >= DateTime.Now);
+            Assert.NotEqual(Guid.Empty, fulfilledOrder.InvoiceId);
+        }
+
+        [Fact]
+        public void BuyVoucher_PerformsAllBuildSteps()
+        {
+            var fulfilledOrder = Program.BuyVoucher();
+
+            Assert.NotEqual(Guid.Empty, fulfilledOrder.PaymentReferenceId);
+            Assert.True(fulfilledOrder.ProductionFinishedTimeEstimate >= DateTime.Now);
+            Assert.NotEqual(Guid.Empty, fulfilledOrder.InvoiceId);
         }
     }
 }

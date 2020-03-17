@@ -1,7 +1,13 @@
-﻿namespace kata_gof_builder_pattern_shop_order_completion
+﻿using System;
+
+namespace kata_gof_builder_pattern_shop_order_completion
 {
     public class FulfilledOrder
     {
-        public bool IsPaymentReserved { get; set; }
+        public Guid OrderId { get; } = Guid.NewGuid();
+        public Guid PaymentReferenceId { get; set; }
+        public DateTime ProductionFinishedTimeEstimate { get; set; }
+        public Guid InvoiceId { get; set; }
+        public bool IsPayed { get; set; }
     }
 }

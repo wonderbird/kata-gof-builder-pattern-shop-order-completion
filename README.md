@@ -1,13 +1,8 @@
 ﻿An order is processed using the following steps:
 
 1. Reserve the payment on the credit card
-1. Create bill of materials for order
-1. Block available parts
-1. Order missing parts
-1. Allocate manufacturing time
-1. Produce ordered item
-1. Ship order
-1. Book money to order
+1. Produce and ship ordered item
+1. Send invoice and book payment to order
 
 You have the following APIs:
 

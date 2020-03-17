@@ -4,14 +4,29 @@ namespace kata_gof_builder_pattern_shop_order_completion
 {
     public class Program
     {
-        public static FulfilledOrder FulfilledOrder;
-
         public static void Main(string[] args)
         {
-            FulfilledOrder = new FulfilledOrder();
+            BuyNewClothes();
+            BuyVoucher();
+        }
 
-            var paymentProvider = new CreditCardPaymentProvider();
-            FulfilledOrder.IsPaymentReserved = paymentProvider.ReservePayment(42.0m);
+        public static FulfilledOrder BuyNewClothes()
+        {
+            var builder = new ClothingFulfilledOrderBuilder();
+            var director = new OrderFulfillmentDirector(builder);
+
+            director.FulfillOrder();
+            return director.GetFulfilledOrder();
+        }
+
+        public static FulfilledOrder BuyVoucher()
+        {
+            throw new NotImplementedException("Use a VoucherFulfilledOrderBuilder instead of Clothing...");
+            var builder = new ClothingFulfilledOrderBuilder();
+            var director = new OrderFulfillmentDirector(builder);
+
+            director.FulfillOrder();
+            return director.GetFulfilledOrder();
         }
     }
 }
