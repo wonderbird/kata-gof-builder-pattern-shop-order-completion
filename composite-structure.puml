@@ -1,0 +1,37 @@
+@startuml
+
+left to right direction
+skinparam componentStyle uml2
+skinparam monochrome true
+
+rectangle "Frontend" {
+	[POS Application] as pos
+	[WebShop] as web
+	' pos -[hidden]-> web
+}
+
+[OrderFulfillmentDirector] as facade
+
+actor "Store Manager" as manager
+manager -> pos
+pos -down-> facade
+
+actor "Web Customer" as customer
+manager -[hidden]-> customer
+customer -down-> web
+web -down-> facade
+
+rectangle "External Systems" {
+	[PaymentProvider] as payment
+	[ProductionProvider] as production
+	[BillingProvider] as billing
+
+	'payment -[hidden]down-> production
+	'production -[hidden]down-> billing
+}
+
+facade -down-> payment
+facade -down-> production
+facade -down-> billing
+
+@enduml

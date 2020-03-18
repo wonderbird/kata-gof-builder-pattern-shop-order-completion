@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace kata_gof_builder_pattern_shop_order_completion
+﻿namespace kata_gof_builder_pattern_shop_order_completion
 {
     public class Program
     {
@@ -21,8 +19,7 @@ namespace kata_gof_builder_pattern_shop_order_completion
 
         public static FulfilledOrder BuyVoucher()
         {
-            throw new NotImplementedException("Use a VoucherFulfilledOrderBuilder instead of Clothing...");
-            var builder = new ClothingFulfilledOrderBuilder();
+            var builder = new VoucherFulfilledOrderBuilder();
             var director = new OrderFulfillmentDirector(builder);
 
             director.FulfillOrder();

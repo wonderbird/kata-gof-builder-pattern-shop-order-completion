@@ -2,9 +2,9 @@
 {
     public class OrderFulfillmentDirector
     {
-        private readonly ClothingFulfilledOrderBuilder _builder;
+        private readonly FulfilledOrderBuilder _builder;
 
-        public OrderFulfillmentDirector(ClothingFulfilledOrderBuilder builder)
+        public OrderFulfillmentDirector(FulfilledOrderBuilder builder)
         {
             _builder = builder;
         }

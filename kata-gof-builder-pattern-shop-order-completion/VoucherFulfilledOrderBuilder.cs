@@ -2,7 +2,7 @@
 
 namespace kata_gof_builder_pattern_shop_order_completion
 {
-    public class ClothingFulfilledOrderBuilder : FulfilledOrderBuilder
+    public class VoucherFulfilledOrderBuilder : FulfilledOrderBuilder
     {
         public override void ReservePayment()
         {
@@ -12,9 +12,9 @@ namespace kata_gof_builder_pattern_shop_order_completion
 
         public override void ProduceAndShipOrder()
         {
-            // Use a production system to order the necessary goods
-            // and to produce the order
-            _fulfilledOrder.ProductionFinishedTimeEstimate = DateTime.Now.AddHours(3.0);
+            // Use a voucher management system to create the voucher
+            // and to send it to the customer
+            _fulfilledOrder.ProductionFinishedTimeEstimate = DateTime.Now.AddMinutes(5.0);
         }
 
         public override void SendInvoiceAndHandlePayment()

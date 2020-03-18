@@ -3,12 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata-gof-builder-pattern-shop-order-completion", "kata-gof-builder-pattern-shop-order-completion\kata-gof-builder-pattern-shop-order-completion.csproj", "{BA15DA09-5C3E-4CB3-9A5F-1224F9DEA5C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kata-gof-builder-pattern-shop-order-completion", "kata-gof-builder-pattern-shop-order-completion\kata-gof-builder-pattern-shop-order-completion.csproj", "{BA15DA09-5C3E-4CB3-9A5F-1224F9DEA5C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata-gof-builder-shop-order-completion-tests", "kata-gof-builder-shop-order-completion-tests\kata-gof-builder-shop-order-completion-tests.csproj", "{763E14F8-BCAD-4487-89E9-695D6A732864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kata-gof-builder-shop-order-completion-tests", "kata-gof-builder-shop-order-completion-tests\kata-gof-builder-shop-order-completion-tests.csproj", "{763E14F8-BCAD-4487-89E9-695D6A732864}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49ADF755-D094-4C7C-8BF1-B64DB45620A3}"
 	ProjectSection(SolutionItems) = preProject
+		BuilderPattern.png = BuilderPattern.png
+		composite-structure.puml = composite-structure.puml
+		composite-structure.svg = composite-structure.svg
 		README.md = README.md
 	EndProjectSection
 EndProject
